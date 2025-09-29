@@ -3,7 +3,6 @@ import { sleep, check } from 'k6'
 const postLogin = JSON.parse(open('../fixtures/postLogin.json'))
 
 export const options = {
-  /*
   stages: [
     { duration: '10s', target: 10 },
     { duration: '20s', target: 10 },
@@ -11,7 +10,7 @@ export const options = {
     { duration: '20s', target: 30 },
     { duration: '20s', target: 0 },
   ],
-  */
+ 
   Iterations: 1,
   thresholds: {
     http_req_duration: ['p(90)<3000', 'max<5000'],
